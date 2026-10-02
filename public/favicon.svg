@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#022c22" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+
+    <!-- Vibrant Green Triangle Gradient -->
+    <linearGradient id="greenTriangleGrad" x1="0%" y1="100%" x2="50%" y2="0%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="45%" stop-color="#10b981" />
+      <stop offset="85%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#6ee7b7" />
+    </linearGradient>
+
+    <!-- Inner Core Gradient -->
+    <linearGradient id="innerTriGrad" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#022c22" />
+      <stop offset="100%" stop-color="#064e3b" />
+    </linearGradient>
+
+    <!-- Subtle Glow Filter -->
+    <filter id="emeraldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Base Rounded Container for high contrast across dark and light browser tabs -->
+  <rect width="64" height="64" rx="14" fill="url(#bgGrad)" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.5" />
+
+  <!-- Ambient Glow Behind Triangle -->
+  <polygon points="32,10 55,49 9,49" fill="#10b981" opacity="0.3" filter="url(#emeraldGlow)" />
+
+  <!-- Main Green Triangle with Rounded Corners -->
+  <path 
+    d="M 30.2 12.2
+       C 31.0 10.8 33.0 10.8 33.8 12.2
+       L 55.4 46.2
+       C 56.2 47.6 55.2 49.5 53.6 49.5
+       L 10.4 49.5
+       C 8.8 49.5 7.8 47.6 8.6 46.2
+       Z" 
+    fill="url(#greenTriangleGrad)" 
+    stroke="#a7f3d0" 
+    stroke-width="1.2"
+  />
+
+  <!-- Inner Inverted Delta (Triad Geometry) -->
+  <polygon points="32,44 23,28 41,28" fill="url(#innerTriGrad)" stroke="#34d399" stroke-width="1.2" stroke-linejoin="round" />
+
+  <!-- Triad Apex / Vertex Nodes -->
+  <circle cx="32" cy="14" r="2.2" fill="#ffffff" />
+  <circle cx="51.5" cy="46.5" r="2" fill="#a7f3d0" />
+  <circle cx="12.5" cy="46.5" r="2" fill="#a7f3d0" />
+  
+  <!-- Central Pulse Point -->
+  <circle cx="32" cy="33.5" r="2" fill="#6ee7b7" />
+</svg>

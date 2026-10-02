@@ -1,0 +1,46 @@
+[
+  {
+    "id": "inquiry-1790095423959-m4b1u",
+    "name": "Test User",
+    "email": "test@example.com",
+    "reason": "Testing contact system",
+    "feedback": "",
+    "userId": "guest",
+    "createdAt": "2026-09-22T16:43:43.959Z",
+    "status": "Received",
+    "organization": "TRiADiC Intelligence Labs"
+  },
+  {
+    "id": "inquiry-1790093900612-3e2bz",
+    "name": "Alex",
+    "email": "alex@example.com",
+    "reason": "Quick question",
+    "feedback": "Testing company confirmation",
+    "userId": "guest",
+    "createdAt": "2026-09-22T16:18:20.611Z",
+    "status": "Received",
+    "organization": "TRiADiC Intelligence Labs"
+  },
+  {
+    "id": "inquiry-1790093731316-lvkh9",
+    "name": "Rose Loops",
+    "email": "thekloakedsignal@gmail.com",
+    "reason": "Testing",
+    "feedback": "Great app!",
+    "userId": "izaaUGzC28eM6FJcisbfKhGrwaF3",
+    "createdAt": "2026-09-22T16:15:31.316Z",
+    "status": "Received",
+    "recipient": "thekloakedsignal@gmail.com"
+  },
+  {
+    "id": "inquiry-1790093553400-wcj24",
+    "name": "Tester",
+    "email": "thekloakedsignal@gmail.com",
+    "reason": "Testing simple contact form",
+    "feedback": "This is a quick verification message.",
+    "userId": "guest",
+    "createdAt": "2026-09-22T16:12:33.400Z",
+    "status": "Received",
+    "recipient": "thekloakedsignal@gmail.com"
+  }
+]

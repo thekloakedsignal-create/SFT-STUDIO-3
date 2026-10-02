@@ -1,0 +1,6 @@
+{
+  "name": "SFT Studio Pro | TRiAD AI by TRiADiC Intelligence Labs",
+  "description": "Production-Grade SFT Training Data Curator by TRiADiC Intelligence Labs for creating, converting, aligning, and validating high-quality supervised fine-tuning (SFT) datasets.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

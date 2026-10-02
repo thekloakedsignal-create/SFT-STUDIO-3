@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Playfair Display", Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-brand-50: #f0fdf4;
+  --color-brand-100: #dcfce7;
+  --color-brand-200: #bbf7d0;
+  --color-brand-500: #22c55e;
+  --color-brand-600: #16a34a;
+  --color-brand-700: #15803d;
+  --color-brand-900: #14532d;
+
+  --radius-xs: 0px;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-2xl: 0px;
+  --radius-3xl: 0px;
+
+  /* Scale standard Tailwind font sizes to ensure complete legibility and width */
+  --text-xs: 0.92rem;
+  --text-sm: 1.05rem;
+  --text-base: 1.18rem;
+  --text-lg: 1.35rem;
+  --text-xl: 1.55rem;
+  --text-2xl: 1.85rem;
+  --text-3xl: 2.25rem;
+}
+
+/* Base custom styles for SFT Studio Pro */
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: var(--font-sans);
+  letter-spacing: 0.035em;
+  background-color: #020617;
+  color: #f8fafc;
+}
+
+/* Universal wide font tracking and full-width border coverage */
+* {
+  letter-spacing: 0.035em;
+}
+
+/* Intercept and scale up arbitrary-pixel subfonts and utility classes */
+[class*="text-[8px]"],
+[class*="text-[9px]"],
+[class*="text-[10px]"],
+[class*="text-[11px]"],
+[class*="text-[12px]"] {
+  font-size: 0.92rem !important;
+}
+
+[class*="text-[13px]"],
+[class*="text-[14px]"],
+[class*="text-[15px]"] {
+  font-size: 1.05rem !important;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 0px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Make editable text inside inputs and textareas a highly distinctive, elegant mint green */
+textarea, 
+input[type="text"], 
+input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]) {
+  color: #34d399 !important; /* Elegant mint green */
+  font-family: var(--font-mono) !important; /* Highly technical and readable JetBrains Mono */
+}
+
+/* Also style placeholder text to fit beautifully with the mint color scheme */
+textarea::placeholder,
+input::placeholder {
+  color: #475569 !important; /* Elegant readable slate grey */
+}
+
+/* Universal text and font containment: prevent any text, token, or filename from breaking out of its container */
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+body, div, span, p, h1, h2, h3, h4, h5, h6, label, button, a, blockquote {
+  overflow-wrap: break-word;
+}
+
+/* Enforce strict boundary confinement on unbroken tokens (filenames, URLs, code paths) */
+pre, code, kbd, samp, .font-mono {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+

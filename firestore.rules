@@ -1,0 +1,51 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper functions
+    function isSignedIn() { return request.auth != null; }
+    function isOwner(userId) { return isSignedIn() && request.auth.uid == userId; }
+
+    // Default deny all
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Connection test document
+    match /test/{docId} {
+      allow read: if true;
+    }
+
+    // Projects: Users can read and write their own projects and guest projects
+    match /projects/{projectId} {
+      allow read, write: if true;
+
+      // Incremental Batches Subcollection
+      match /batches/{batchId} {
+        allow read, write: if true;
+      }
+    }
+
+    // Users: Users can only read/write their own profile
+    match /users/{userId} {
+      allow read, write: if true;
+    }
+
+    // Student Codes: Read and write for redemption logic
+    match /student_codes/{codeId} {
+      allow read, write: if true;
+    }
+
+    // Custom Package Purchase Inquiries & Support Inquiries
+    match /custom_package_inquiries/{inquiryId} {
+      allow read, write: if true;
+    }
+
+    match /support_inquiries/{inquiryId} {
+      allow read, write: if true;
+    }
+
+    match /account_deletions/{deletionId} {
+      allow read, write: if true;
+    }
+  }
+}

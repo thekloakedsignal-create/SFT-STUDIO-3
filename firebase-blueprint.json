@@ -1,0 +1,169 @@
+{
+  "entities": {
+    "Project": {
+      "title": "SFT Project",
+      "description": "An SFT project containing configuration presets and dataset batches",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique project identifier"
+        },
+        "userId": {
+          "type": "string",
+          "description": "Owner user identifier"
+        },
+        "name": {
+          "type": "string",
+          "maxLength": 100,
+          "description": "Name of the project"
+        },
+        "settings": {
+          "type": "object",
+          "description": "Project configuration and guidelines"
+        },
+        "batches": {
+          "type": "array",
+          "description": "List of dataset batches belonging to the project"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp when the project was created"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp when the project was last updated"
+        }
+      },
+      "required": ["id", "userId", "name", "settings", "createdAt", "updatedAt"]
+    },
+    "Batch": {
+      "title": "SFT Dataset Batch",
+      "description": "An incremental batch of synthetic or converted SFT training examples",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique batch identifier"
+        },
+        "name": {
+          "type": "string",
+          "description": "Display name of the batch"
+        },
+        "source": {
+          "type": "string",
+          "description": "Generation source (Generator, Doc Conversion, TRiAD Alignment, Dataset Import)"
+        },
+        "templateType": {
+          "type": "string",
+          "description": "Format template (Single Turn, Multi Turn, System Reasoner)"
+        },
+        "examplesCount": {
+          "type": "number",
+          "description": "Number of examples in this batch"
+        },
+        "examples": {
+          "type": "array",
+          "description": "List of SFT examples in this batch"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["Pending", "Approved", "Rejected"],
+          "description": "Review status of this batch"
+        },
+        "timestamp": {
+          "type": "string",
+          "description": "Creation timestamp of the batch"
+        },
+        "description": {
+          "type": "string",
+          "description": "Summary description of the batch generation"
+        }
+      },
+      "required": ["id", "name", "source", "templateType", "examplesCount", "examples", "status", "timestamp"]
+    },
+    "User": {
+      "title": "User Profile",
+      "description": "Stores user subscription status, limit, and code redemptions",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "User identifier matching auth.currentUser.uid"
+        },
+        "subscriptionStatus": {
+          "type": "string",
+          "enum": ["Free", "Premium", "Student"],
+          "description": "The tier level of the user"
+        },
+        "limit": {
+          "type": "number",
+          "description": "Maximum number of examples allowed (50, 1000, or 5000)"
+        },
+        "redeemedCode": {
+          "type": "string",
+          "description": "The student code redeemed by the user, if any"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp of the last update"
+        }
+      },
+      "required": ["userId", "subscriptionStatus", "limit", "updatedAt"]
+    },
+    "StudentCode": {
+      "title": "Student Code",
+      "description": "Redemption code for classes allowing 5000 examples up to 10 uses",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique code identifier"
+        },
+        "code": {
+          "type": "string",
+          "description": "Uppercase alphanumeric class code"
+        },
+        "redemptionCount": {
+          "type": "number",
+          "description": "Number of times the code has been redeemed (max 10)"
+        },
+        "maxRedemptions": {
+          "type": "number",
+          "description": "Limit of total redemptions allowed (usually 10)"
+        },
+        "redeemedUserIds": {
+          "type": "array",
+          "description": "List of user UIDs who have redeemed this code"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp when the code was created"
+        }
+      },
+      "required": ["id", "code", "redemptionCount", "maxRedemptions", "redeemedUserIds", "createdAt"]
+    }
+  },
+  "firestore": {
+    "projects/{projectId}": {
+      "schema": "Project",
+      "description": "Store all user projects"
+    },
+    "projects/{projectId}/batches/{batchId}": {
+      "schema": "Batch",
+      "description": "Store individual incremental dataset batches under a project"
+    },
+    "users/{userId}": {
+      "schema": "User",
+      "description": "Store user profiles, subscriptions, and limits"
+    },
+    "student_codes/{codeId}": {
+      "schema": "StudentCode",
+      "description": "Store student class codes and redemption logs"
+    }
+  }
+}

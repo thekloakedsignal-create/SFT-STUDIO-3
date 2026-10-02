@@ -1,0 +1,154 @@
+[
+  {
+    "id": "project-1790453760383",
+    "userId": "device-nrnjn8wk5w1790453685482",
+    "name": "SFT Project 2",
+    "settings": {
+      "name": "SFT Project 2",
+      "systemPrompt": "You are a helpful, respectful, and honest AI assistant. Always answer queries as accurately and safely as possible, providing clear and direct explanations.",
+      "targetTask": "Instruction following, educational explanations, summaries, and general QA.",
+      "constraints": "Maintain a helpful and educational tone. Avoid speculative claims. Keep answers concise, factual, and fully self-contained.",
+      "selectedPreset": "General Use AI",
+      "projectFormat": "Instruction",
+      "templateType": "Instruction Template",
+      "instructTemplate": "ChatML",
+      "customInstructionFormat": "### Instruction:\n{instruction}\n\n### Input:\n{input}\n\n### Response:\n{response}",
+      "representativePrompt": "Explain why the sky appears blue.",
+      "representativeCompletion": "The sky appears blue because molecules in Earth's atmosphere scatter shorter wavelengths of sunlight more strongly than longer wavelengths."
+    },
+    "batches": [
+      {
+        "id": "batch-1790453842339",
+        "name": "Roast",
+        "source": "DigitalOcean Multi-Model Ensemble (glm-5.3-flash)",
+        "templateType": "Single Turn",
+        "examplesCount": 5,
+        "examples": [
+          {
+            "messages": [
+              {
+                "role": "system",
+                "content": "You are a helpful, respectful, and honest AI assistant. Always answer queries as accurately and safely as possible, providing clear and direct explanations."
+              },
+              {
+                "role": "user",
+                "content": "I've been putting off going to the gym for two years and I just bought a $2,000 home treadmill that I've used twice. Roast me."
+              },
+              {
+                "role": "assistant",
+                "content": "Congratulations! You've officially achieved what scientists once thought impossible: spending $2,000 to turn a treadmill into the world's most expensive clothes rack. That machine didn't join your home gym — it joined your home museum, right next to the ab roller from 2019 and the resistance bands still in their shrink wrap like priceless artifacts. You've used it twice? So has the dust, and honestly, the dust is putting in more reps. Your 'starting Monday' streak has outlasted most Netflix relationships, and your New Year's resolutions filed for emotional abandonment years ago. The treadmill's display probably still shows 'Welcome, User!' with the naive optimism of a golden retriever waiting by a door that never opens. Here's the beautiful part: walking to the fridge apparently counts as cardio in your fitness philosophy, and you've been training for it consistently. Look, the good news is the treadmill is just sitting there, patiently, like an unpaid therapist. Tomorrow it will still be there. So will the dust. Maybe let them finally meet properly — laces on, ten minutes, no excuses. Your credit card already did the heavy lifting; it's time the rest of you joined the team."
+              }
+            ],
+            "_generatedBy": "glm-5.3-flash",
+            "id": "synth-1790453842339-0",
+            "templateType": "Single Turn"
+          },
+          {
+            "messages": [
+              {
+                "role": "system",
+                "content": "You are a helpful, respectful, and honest AI assistant. Always answer queries as accurately and safely as possible, providing clear and direct explanations."
+              },
+              {
+                "role": "user",
+                "content": "I have 47 browser tabs open, haven't closed my email since March, and I call this 'my system.' Roast me."
+              },
+              {
+                "role": "assistant",
+                "content": "Ah yes, 'my system' — a phrase historically used by geniuses and people with 47 tabs slowly devouring their laptop's soul like digital termites. Your browser isn't open, it's hosting a hostage situation. Somewhere in tab 23 is a recipe you'll never cook, in tab 31 an article titled 'How to Focus' that's been open since it could legally vote, and tab 47 is just screaming in binary. Your email with 12,000 unread messages isn't an inbox, it's a landfill with a search bar — a monument to your belief that 'marking as unread' is the same as dealing with things. Your RAM didn't die of natural causes; it was murdered, and you were the only suspect at the scene holding a smoking mouse. You call it a system the way a hoarder calls a hallway 'storage solutions.' The only organization here is alphabetical chaos, which isn't a thing no matter how confidently you say it. And yet, deep down, we both know the scariest moment of your week will be the day the browser crashes and you must confront a blank new tab page like an existential void. Do yourself a favor: bookmark five tabs, close forty-two, and open your inbox like an adult. Your laptop will purr. Your anxiety will purr louder."
+              }
+            ],
+            "_generatedBy": "glm-5.3-flash",
+            "id": "synth-1790453842339-1",
+            "templateType": "Single Turn"
+          },
+          {
+            "messages": [
+              {
+                "role": "system",
+                "content": "You are a helpful, respectful, and honest AI assistant. Always answer queries as accurately and safely as possible, providing clear and direct explanations."
+              },
+              {
+                "role": "user",
+                "content": "I told my friends I'd plan the group trip 'next week'... eight months ago. Roast me."
+              },
+              {
+                "role": "assistant",
+                "content": "Eight months of 'next week' — congratulations, you've discovered time travel, because in your calendar next week is apparently a mythical realm like Atlantis or 'after this season of my show.' Your friends created a group chat, made a shared spreadsheet, and picked dates, and you contributed the two most powerful words in procrastination history: 'next week.' Those words have now aged like milk left in a hot car. At this point the trip has a lore, a backstory, and probably a documentary in development. Your friends have stopped asking and started grieving. One of them quietly booked a solo trip to Lisbon just to feel something. The group chat's last message is a thumbs-up from you, radiating false hope like a used car salesman. Here's the brutal truth: you weren't busy, you were just committed to the bit. Planning a trip takes roughly one evening and a credit card — you've had 240 evenings. The hotel prices have doubled, the flights have tripled, and your credibility has evaporated entirely. So here's your redemption arc, available for a limited time: open a booking site tonight, pick actual dates, send the link before your friends change the group name to 'The Trip That Never Was.' Next week you — not the metaphorical one, the real one. Tonight counts."
+              }
+            ],
+            "_generatedBy": "glm-5.3-flash",
+            "id": "synth-1790453842339-2",
+            "templateType": "Single Turn"
+          },
+          {
+            "messages": [
+              {
+                "role": "system",
+                "content": "You are a helpful, respectful, and honest AI assistant. Always answer queries as accurately and safely as possible, providing clear and direct explanations."
+              },
+              {
+                "role": "user",
+                "content": "I say 'I'll read the documentation later' at work every single day and then bug my senior coworker instead. Roast me."
+              },
+              {
+                "role": "assistant",
+                "content": "Ah, the daily ritual: scrolling past the documentation like it's a haunted house, then teleporting across the office to your senior coworker with the enthusiasm of a golden retriever holding a stick that says 'please fix my brain.' 'I'll read the docs later' is the corporate equivalent of 'I'll start my diet tomorrow' — technically a sentence, spiritually a lie. Your senior coworker didn't sign up to be your personal Stack Overflow with legs. They took this job to build software, not to run a one-person help desk for someone whose Ctrl+F key has never been pressed. Somewhere in that documentation is the exact answer you've asked about four times, sitting in bold, with a code example, practically waving at you. Meanwhile, your senior's eye twitch has developed its own eye twitch. Every 'quick question' costs them ten minutes and costs you nothing, which is why you've optimized for it — you're not lazy, you're an efficiency parasite, and honestly, that's almost impressive. But here's the twist: reading the docs would make you the dangerous one, the coworker with answers, the person others bother instead. Imagine that power. So tomorrow, before the pounce, give the docs thirty minutes. If you're still stuck, ask — with context, like a professional. Your senior might even smile. Don't push it, though."
+              }
+            ],
+            "_generatedBy": "glm-5.3-flash",
+            "id": "synth-1790453842339-3",
+            "templateType": "Single Turn"
+          },
+          {
+            "messages": [
+              {
+                "role": "system",
+                "content": "You are a helpful, respectful, and honest AI assistant. Always answer queries as accurately and safely as possible, providing clear and direct explanations."
+              },
+              {
+                "role": "user",
+                "content": "I keep buying plants and killing them within a month. My apartment is basically a plant graveyard. Roast me."
+              },
+              {
+                "role": "assistant",
+                "content": "So you're running a botanical hospice with excellent interior lighting. Every few weeks you stroll into a garden center, make eye contact with a helpless fern, and whisper 'you'll be different' — a lie so statistically disproven it should require a signed waiver. Your apartment isn't decorated, it's a crime scene with aesthetic. There's the sad ficus by the window, standing at a 40-degree lean like it's trying to escape. The succulent? Overwatered to death, which takes genuine commitment — those things survive deserts and neglect, but not your love. You killed the unkillable. That's not a brown thumb; that's a plant-specific curse. The pothos, famously labeled 'impossible to kill,' saw your watering can and simply chose the void. Even the fake plant is gathering dust with an expression of relief that it dodged a bullet. Meanwhile, the cactus — a creature that thrives on being ignored, your one natural skill — is somehow the healthiest thing you own, thriving purely because you forgot it exists. That's your gardening philosophy in a nutshell: the less you care, the better everything does. So here's the deal: stop buying plants like they're impulse snacks. Get one snake plant, water it monthly, resist the urge to 'help,' and for the love of chlorophyll, check the drainage holes. Your windowsill deserves survivors, not memorials."
+              }
+            ],
+            "_generatedBy": "glm-5.3-flash",
+            "id": "synth-1790453842339-4",
+            "templateType": "Single Turn"
+          }
+        ],
+        "status": "Pending",
+        "timestamp": "2026-09-26 20:17",
+        "description": "Roast",
+        "specialInstructions": "Upon user request, responses Use with sarcasm and humor to delivery roast",
+        "temporaryConstraints": "150 word minimum. "
+      }
+    ],
+    "updatedAt": "2026-09-26T20:17:22.441Z"
+  },
+  {
+    "id": "project-1790077523789",
+    "userId": "izaaUGzC28eM6FJcisbfKhGrwaF3",
+    "name": "SFT Project 7",
+    "settings": {
+      "name": "SFT Project 7",
+      "systemPrompt": "You are a helpful, respectful, and honest AI assistant. Always answer queries as accurately and safely as possible, providing clear and direct explanations.",
+      "targetTask": "Instruction following, educational explanations, summaries, and general QA.",
+      "constraints": "Maintain a helpful and educational tone. Avoid speculative claims. Keep answers concise, factual, and fully self-contained.",
+      "selectedPreset": "General Use AI",
+      "projectFormat": "Instruction",
+      "templateType": "Instruction Template",
+      "instructTemplate": "ChatML",
+      "customInstructionFormat": "### Instruction:\n{instruction}\n\n### Input:\n{input}\n\n### Response:\n{response}",
+      "representativePrompt": "Explain why the sky appears blue.",
+      "representativeCompletion": "The sky appears blue because molecules in Earth's atmosphere scatter shorter wavelengths of sunlight more strongly than longer wavelengths."
+    },
+    "batches": [],
+    "updatedAt": "2026-09-22T11:46:50.346Z",
+    "batchCount": 0,
+    "totalExamples": 0
+  }
+]
